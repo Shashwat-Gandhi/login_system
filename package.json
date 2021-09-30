@@ -9,7 +9,7 @@
     "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shashwat Gandhi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

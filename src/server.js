@@ -8,10 +8,10 @@ const router = express.Router();
 const port = process.env.PORt || 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', './views')
+app.set('views', '../views')
 
 
-app.use('/',express.static('./public/'))
+app.use('/',express.static('../public/'))
 app.use(bodyparser.urlencoded({ extended : false }));
 app.use(bodyparser.json());
 app.use('/',router);
@@ -23,7 +23,7 @@ router.get('/', (req,res) => {
 
 router.post('/', (req,res) => {
     console.log("user : " + req.body.email + " pass : " + req.body.password);
-    fs.readFile('./private/users.dat','utf8',(err,data) => {
+    fs.readFile('../private/users.dat','utf8',(err,data) => {
         if(err) {
             console.error(err);
             return;
